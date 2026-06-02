@@ -4,59 +4,116 @@
     <title>Edit Volunteer Call</title>
 
     <style>
-        body{
-            margin:0;
-            font-family:Arial, sans-serif;
-            background:linear-gradient(to right, #1b4332, #52b788);
-            min-height:100vh;
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to right, #1b4332, #52b788);
+            min-height: 100vh;
         }
 
-        .container{
-            width:650px;
-            background:#f4f7ef;
-            margin:40px auto;
-            padding:45px;
-            border-radius:25px;
+        .container {
+            width: 650px;
+            background: #f4f7ef;
+            margin: 40px auto;
+            padding: 45px;
+            border-radius: 25px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
         }
 
-        h1{
-            text-align:center;
-            color:#1b4332;
-            font-size:38px;
+        h1 {
+            text-align: center;
+            color: #1b4332;
+            font-size: 38px;
+            margin-bottom: 1.5rem;
         }
 
-        label{
-            font-weight:bold;
-            color:#333;
+        label {
+            font-weight: bold;
+            color: #333;
+            display: block;
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
         }
 
-        input, textarea{
-            width:100%;
-            padding:14px;
-            margin:10px 0 22px;
-            border:1px solid #ddd;
-            border-radius:10px;
-            font-size:16px;
+        input, textarea {
+            width: 100%;
+            padding: 14px;
+            margin-bottom: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            font-size: 16px;
+            font-family: inherit;
+            box-sizing: border-box;
         }
 
-        button{
-            width:100%;
-            padding:15px;
-            background:green;
-            color:white;
-            border:none;
-            border-radius:10px;
-            font-size:18px;
-            font-weight:bold;
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: #1b4332;
+            box-shadow: 0 0 8px rgba(27, 67, 50, 0.2);
         }
 
-        .cancel{
-            display:block;
-            text-align:center;
-            margin-top:20px;
-            color:#1b4332;
-            font-weight:bold;
-            text-decoration:none;
+        .form-actions {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        button {
+            flex: 1;
+            padding: 15px;
+            background: #1b4332;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        button:hover {
+            background: #2a5c3c;
+            box-shadow: 0 5px 15px rgba(27, 67, 50, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .btn-cancel {
+            background: #e0e0e0;
+            color: #333;
+        }
+
+        .btn-cancel:hover {
+            background: #d0d0d0;
+        }
+
+        .cancel-link {
+            display: block;
+            text-align: center;
+            margin-top: 1rem;
+            color: #1b4332;
+            font-weight: bold;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .cancel-link:hover {
+            color: #2a5c3c;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                width: 90%;
+                margin: 20px auto;
+                padding: 25px;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+
+            .form-actions {
+                flex-direction: column;
+            }
         }
     </style>
 </head>
@@ -66,26 +123,26 @@
 <div class="container">
     <h1>Edit Volunteer Call</h1>
 
-    <form action="volunteer_list.html">
+    <form action="organizer.html" method="POST">
         <label>Title</label>
-        <input type="text" value="Beach Cleaning Program">
+        <input type="text" name="title" value="Beach Cleanup Drive" required>
 
         <label>Description</label>
-        <textarea rows="5">Cleaning activity at the beach.</textarea>
-
-        <label>Location</label>
-        <input type="text" value="Port Dickson">
+        <textarea rows="5" name="description" required>Environmental conservation and beach cleanup initiative</textarea>
 
         <label>Date</label>
-        <input type="date" value="2026-06-10">
+        <input type="date" name="date" value="2026-05-28" required>
 
         <label>Required Hours</label>
-        <input type="number" value="5">
+        <input type="number" name="hours" value="8" required>
 
-        <button type="submit">Update Volunteer Call</button>
+        <div class="form-actions">
+            <button type="submit">Update Volunteer Call</button>
+            <button type="button" class="btn-cancel" onclick="window.history.back()">Cancel</button>
+        </div>
     </form>
 
-    <a href="volunteer_list.html" class="cancel">Cancel</a>
+    <a href="organizer.html" class="cancel-link">Back to Dashboard</a>
 </div>
 
 </body>
