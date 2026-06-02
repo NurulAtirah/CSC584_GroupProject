@@ -7,4 +7,4 @@ GROUP MEMBERS:
 3. GLORIA TRIZA MOJIUN (2024803882)
 4. AYUNI FARHANA BINTI ROSLI (2024234738)
 
-link Google Drive ERD: https://drive.google.com/file/d/1CegOy4KXIN7lJSGGPTkJ3E88jsHG1pht/view?usp=sharing
+link Google Drive ERD: https://drive.google.com/file/d/1vVvMWjdojuCTetlNlI8ffEzboZ3Wtesn/view?usp=sharing
