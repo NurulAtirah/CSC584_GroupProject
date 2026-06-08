@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Volunteer Call</title>
+
+    <style>
+        body{
+            margin:0;
+            font-family:Arial, sans-serif;
+            background:linear-gradient(to right, #1b4332, #52b788);
+            min-height:100vh;
+        }
+
+        .container{
+            width:650px;
+            background:#f4f7ef;
+            margin:40px auto;
+            padding:45px;
+            border-radius:25px;
+        }
+
+        h1{
+            text-align:center;
+            color:#1b4332;
+            font-size:38px;
+        }
+
+        label{
+            font-weight:bold;
+            color:#333;
+        }
+
+        input, textarea{
+            width:100%;
+            padding:14px;
+            margin:10px 0 22px;
+            border:1px solid #ddd;
+            border-radius:10px;
+            font-size:16px;
+        }
+
+        button{
+            width:100%;
+            padding:15px;
+            background:green;
+            color:white;
+            border:none;
+            border-radius:10px;
+            font-size:18px;
+            font-weight:bold;
+        }
+
+        .cancel{
+            display:block;
+            text-align:center;
+            margin-top:20px;
+            color:#1b4332;
+            font-weight:bold;
+            text-decoration:none;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+    <h1>Add Volunteer Call</h1>
+
+    <form action="organizer.html">
+        <label>Title</label>
+        <input type="text" placeholder="Enter volunteer call title">
+
+        <label>Description</label>
+        <textarea rows="5" placeholder="Enter activity description"></textarea>
+
+        <label>Date</label>
+        <input type="date">
+
+        <label>Required Hours</label>
+        <input type="number" placeholder="Enter required hours">
+
+        <button type="submit">Save Volunteer Call</button>
+    </form>
+
+    <a href="organizer.html" class="cancel">Cancel</a>
+</div>
+
+</body>
+</html>
